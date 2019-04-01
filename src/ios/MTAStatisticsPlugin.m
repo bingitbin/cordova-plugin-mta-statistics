@@ -22,8 +22,8 @@
 }
 
 - (void)initMTAStatistics {
-    [[MTAAppMonitorStat defaultStat] startWithAppkey:APP_ID];
-    [[MTAAppMonitorStat defaultStat] setEnableDebugOn:YES];
+    [MTA startWithAppkey:APP_ID];
+    [MTA setEnableDebugOn:YES];
 }
 
 - (void)onPageStart:(CDVInvokedUrlCommand*)command
@@ -36,7 +36,7 @@
             result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"please pass page name"];
         }
         else {
-            [[MTAAppMonitorStat defaultStat] trackPageViewBegin:[command argumentAtIndex:0]];
+            [MTA trackPageViewBegin:[command argumentAtIndex:0]];
             result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
         }
         
@@ -53,7 +53,7 @@
             result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"please pass page name"];
         }
         else {
-            [[MTAAppMonitorStat defaultStat] trackPageViewEnd:[command argumentAtIndex:0]];
+            [MTA trackPageViewEnd:[command argumentAtIndex:0]];
             result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
         }
         [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
@@ -68,7 +68,7 @@
         result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"please pass event and label"];
     }
     else {
-        [[MTAAppMonitorStat defaultStat] trackCustomKeyValueEvent:[command argumentAtIndex:0]];
+        [MTA trackCustomKeyValueEvent:[command argumentAtIndex:0] props:nil];
         result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     }
     
