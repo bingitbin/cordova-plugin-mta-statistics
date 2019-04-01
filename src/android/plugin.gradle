@@ -1,0 +1,24 @@
+
+repositories {
+    jcenter()
+}
+
+
+// android {
+//     defaultConfig {
+//         manifestPlaceholders = [
+//         MTA_APPKEY:"A5FB4W1CUI8F",
+//         MTA_CHANNEL:"渠道名称555"
+//         ]
+//     }
+// }
+
+dependencies {
+    //MTA主包
+    //compile 'com.qq.mta:mta:3.4.2'
+
+    //MID基础包
+    //compile  'com.tencent.mid:mid:3.73-release'
+    compile files('libs/mta-android-sdk-3.4.7.jar')
+    compile files('libs/mid-sdk-4.06.jar')
+}

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-mtastatistics" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>mtastatistics</name>
+    <preference name="IOSAPPID" />
+    <preference name="ANDROIDAPPID" />
+    <js-module name="MTAStatistics" src="www/mtastatistics.js">
+        <clobbers target="cordova.plugins.MTAStatistics" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="mtastatistics">
+                <param name="android-package" value="org.apache.cordova.mtastatistics.MTAStatisticsPlugin" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <!-- MTA必须的权限 -->
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+            <!-- MTA可选的权限，请根据实际情况处理 -->
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+            <!-- LBS增值功能权限，请根据实际情况处理 -->
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.GET_TASKS" />
+            <uses-permission android:name="android.permission.VIBRATE" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <meta-data android:name="TA_APPKEY" android:value="$ANDROIDAPPID" />
+            <meta-data android:name="InstallChannel" android:value="test channel" />
+        </config-file>
+        <framework src="src/android/plugin.gradle" custom="true" type="gradleReference" />
+        <source-file src="src/android/MTAStatisticsPlugin.java" target-dir="src/org/apache/cordova/mtastatistics"
+        />
+         <source-file src="src/android/mta-android-sdk-3.4.7.jar" target-dir="libs"
+        />
+         <source-file src="src/android/mid-sdk-4.06.jar" target-dir="libs"
+        />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="mtastatistics">
+                <param name="ios-package" value="MTAStatisticsPlugin" />
+            </feature>
+            <preference name="appid" value="$IOSAPPID" />
+        </config-file>
+        <header-file src="src/ios/libs/MTA.h" />
+        <source-file src="src/ios/MTAStatisticsPlugin.m" />
+        <source-file framework="true" src="src/ios/libs/libmtasdk.a" />
+        <framework src="libz.tbd" weak="true" />
+        <framework src="libsqlite3.tbd" weak="true" />
+        <framework src="QuartzCore.framework" weak="true" />
+        <framework src="Security.framework" weak="true" />
+        <framework src="CFNetwork.framework" weak="true" />
+        <framework src="SystemConfiguration.framework" weak="true" />
+        <framework src="CoreTelephony.framework" weak="true" />
+        <framework src="UIKit.framework" weak="true" />
+        <framework src="Foundation.framework" weak="true" />
+        <framework src="CoreGraphics.framework" weak="true" />
+        <framework src="libmtasdk.a" weak="true" />
+    </platform>
+</plugin>

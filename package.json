@@ -1,0 +1,58 @@
+{
+  "_from": "cordova-plugin-mtastatistics",
+  "_id": "cordova-plugin-mtastatistics@0.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-Dcr9d2f0aF65C5ZM1YG/qX948bQhJeWrbAnFLXX7Ev1J+AVRTepCm+TA/RjCDHu/Xe0LtZKRmVTaJRno36jI2A==",
+  "_location": "/cordova-plugin-mtastatistics",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-mtastatistics",
+    "name": "cordova-plugin-mtastatistics",
+    "escapedName": "cordova-plugin-mtastatistics",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-mtastatistics/-/cordova-plugin-mtastatistics-0.0.1.tgz",
+  "_shasum": "a9fab4f12d2a903fb2502019657e20a304084672",
+  "_spec": "cordova-plugin-mtastatistics",
+  "_where": "D:\\Document\\hybrid app\\cordova\\umihome-app",
+  "author": {
+    "name": "hhjjj1010"
+  },
+  "bugs": {
+    "url": "https://github.com/hhjjj1010/cordova-plugin-mtastatistics/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-mtastatistics",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "a cordova plugin, a JS version of baidu-mob-statistics",
+  "homepage": "https://github.com/hhjjj1010/cordova-plugin-mtastatistics#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-plugin-mtastatistics",
+    "mtastatistics",
+    "qqstatistics"
+  ],
+  "license": "ISC",
+  "name": "cordova-plugin-mtastatistics",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hhjjj1010/cordova-plugin-mtastatistics.git"
+  },
+  "version": "0.0.1"
+}
