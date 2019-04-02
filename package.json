@@ -1,6 +1,6 @@
 {
   "_from": "cordova-plugin-mtastatistics",
-  "_id": "cordova-plugin-mtastatistics@0.0.1",
+  "_id": "cordova-plugin-mtastatistics@0.0.3",
   "_inBundle": false,
   "_location": "/cordova-plugin-mtastatistics",
   "_phantomChildren": {},
@@ -51,5 +51,5 @@
     "type": "git",
     "url": "git+https://github.com/bingitbin/cordova-plugin-mta-statistics.git"
   },
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
