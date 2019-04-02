@@ -23,7 +23,7 @@
 
 - (void)initMTAStatistics {
     [MTA startWithAppkey:APP_ID];
-    [MTA setEnableDebugOn:YES];
+    //[MTA setEnableDebugOn:YES];
 }
 
 - (void)onPageStart:(CDVInvokedUrlCommand*)command
