@@ -42,7 +42,8 @@
     "cordova-ios",
     "cordova-plugin-mtastatistics",
     "mtastatistics",
-    "qqstatistics"
+    "qqstatistics",
+    "腾讯移动统计"
   ],
   "license": "ISC",
   "name": "cordova-plugin-mtastatistics",
@@ -50,5 +51,5 @@
     "type": "git",
     "url": "git+https://github.com/bingitbin/cordova-plugin-mta-statistics.git"
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }

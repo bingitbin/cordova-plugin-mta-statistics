@@ -16,7 +16,7 @@
 - (void)pluginInitialize {
     [self.commandDelegate runInBackground:^{
         CDVViewController *viewController = (CDVViewController *)self.viewController;
-        APP_ID = [viewController.settings objectForKey:@"appid"];
+        APP_ID = [viewController.settings objectForKey:@"TA_APPKEY"];
         [self initMTAStatistics];
     }];
 }

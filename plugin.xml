@@ -47,7 +47,7 @@
             <feature name="mtastatistics">
                 <param name="ios-package" value="MTAStatisticsPlugin" />
             </feature>
-            <preference name="appid" value="$IOSAPPID" />
+            <preference name="TA_APPKEY" value="$IOSAPPID" />
         </config-file>
         <header-file src="src/ios/libs/MTA.h" />
         <source-file src="src/ios/MTAStatisticsPlugin.m" />
