@@ -17,6 +17,8 @@ cordova.plugins.BaiduMobStatistics.onEvent(eventId, eventLabel, successFn, error
 
 ### 使用简单示范
 router.afterEach((to,from) => {
+
     cordova.plugins.BaiduMobStatistics.onPageStart(to.fullPath);
     cordova.plugins.BaiduMobStatistics.onPageEnd(from.fullPath)；
+    
 })
