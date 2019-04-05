@@ -9,16 +9,16 @@
    cordova plugin add cordova-plugin-mtastatistics --variable IOSAPPID=KKGI68BJ94YT --variable ANDROIDAPPID=M7FB4W1CUI8K
 
 ### API
-cordova.plugins.BaiduMobStatistics.onPageStart(pageName, successFn, errorFn)
+cordova.plugins.MTAStatistics.onPageStart(pageName, successFn, errorFn)
 
-cordova.plugins.BaiduMobStatistics.onPageEnd(pageName, successFn, errorFn)
+cordova.plugins.MTAStatistics.onPageEnd(pageName, successFn, errorFn)
 
-cordova.plugins.BaiduMobStatistics.onEvent(eventId, eventLabel, successFn, errorFn)
+cordova.plugins.MTAStatistics.onEvent(eventId, eventLabel, successFn, errorFn)
 
 ### 使用简单示范
 router.afterEach((to,from) => {
 
-    cordova.plugins.BaiduMobStatistics.onPageStart(to.fullPath);
-    cordova.plugins.BaiduMobStatistics.onPageEnd(from.fullPath)；
+    cordova.plugins.MTAStatistics.onPageStart(to.fullPath);
+    cordova.plugins.MTAStatistics.onPageEnd(from.fullPath)；
     
 })
